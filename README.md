@@ -17,7 +17,25 @@ Aplicativo Android que funciona offline e online, conversando como uma "consciê
 - Conectar um provedor online via API com chave configurada em `local.properties` ou backend.
 
 ## Gerar APK
-```bash
-./gradlew assembleDebug
-```
+### Opção 1: Android Studio (mais simples)
+1. Instale o Android Studio.
+2. Abra este projeto.
+3. Aguarde o download do **Android SDK** e ferramentas de build.
+4. No menu, escolha **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
+
+### Opção 2: Linha de comando
+1. Instale o Android SDK (incluindo **platform-tools** e **build-tools**).
+2. Crie/ajuste o arquivo `local.properties` com o caminho do SDK:
+   ```properties
+   sdk.dir=/caminho/para/Android/Sdk
+   ```
+3. Execute:
+   ```bash
+   gradle :app:assembleDebug
+   ```
+   Ou use o script:
+   ```bash
+   ./scripts/build-apk.sh
+   ```
+
 O APK será gerado em `app/build/outputs/apk/debug/app-debug.apk`.
