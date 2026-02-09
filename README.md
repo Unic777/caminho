@@ -23,6 +23,13 @@ Aplicativo Android que funciona offline e online, conversando como uma "consciê
 3. Aguarde o download do **Android SDK** e ferramentas de build.
 4. No menu, escolha **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
 
+#### Se aparecer erro de Gradle (ex.: “Cannot choose between the following variants…”)
+Esse erro acontece quando o Gradle/Android Studio está **muito antigo** para o plugin atual. Faça assim:
+1. No Android Studio, vá em **File > Settings > Build, Execution, Deployment > Gradle**.
+2. Em **Gradle JDK**, selecione **JDK 17**.
+3. Em **Gradle version**, use **8.2** ou superior (se aparecer).
+4. Clique em **Sync Now** no topo do Android Studio.
+
 ### Opção 2: Linha de comando
 1. Instale o Android SDK (incluindo **platform-tools** e **build-tools**).
 2. Crie/ajuste o arquivo `local.properties` com o caminho do SDK:
